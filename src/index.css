@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Open Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  /* Paleta Disciplinada em HSL: #A0522D (Principal) + #E8B84A (Secundária) */
+  --bg-canvas: 35 33% 97%;
+  --bg-surface: 34 25% 93%;
+  --bg-elevated: 36 40% 99%;
+  --bg-dark: 19 36% 14%;
+  --bg-dark-elevated: 19 32% 18%;
+
+  --ink-primary: 19 34% 15%;
+  --ink-secondary: 20 18% 36%;
+  --ink-muted: 20 14% 46%;
+  --ink-on-dark: 35 33% 96%;
+  --ink-muted-on-dark: 32 18% 76%;
+
+  /* Cor Principal: #A0522D -> hsl(19, 56%, 40%) */
+  --accent-primary: 19 56% 40%;
+  --accent-primary-hover: 19 58% 33%;
+  --accent-primary-ink: 35 33% 98%;
+
+  /* Cor Secundária: #E8B84A -> hsl(42, 77%, 60%) */
+  --accent-secondary: 42 77% 60%;
+  --accent-secondary-hover: 42 78% 53%;
+  --accent-secondary-ink: 19 42% 14%;
+
+  --border-subtle: 26 20% 87%;
+  --border-dark: 19 24% 25%;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: hsl(var(--bg-canvas));
+  color: hsl(var(--ink-primary));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: hsl(var(--bg-canvas));
+  color: hsl(var(--ink-primary));
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
